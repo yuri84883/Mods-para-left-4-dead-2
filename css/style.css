@@ -1,0 +1,380 @@
+/* --- Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #a2e89f; /* Verde característico del modelo */
+    font-family: 'Roboto', sans-serif;
+    color: #1a1a1a;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* --- Encabezado --- */
+header {
+    margin-bottom: 40px;
+}
+
+.main-title {
+    font-family: 'Lobster', cursive;
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.sub-title {
+    color: #8b1e1e; /* Rojo oscuro para resaltar */
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1.05;
+}
+
+.subscribe-link {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.subscribe-link:hover .sub-title {
+    color: #b22222;
+    transform: scale(1.02);
+}
+
+.yt-logo {
+    width: 220px;
+    border-radius: 12px;
+    padding: 6px;
+    background: #fff;
+    border: 4px solid rgba(0,0,0,0.85);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.55), 0 0 8px rgba(255,215,0,0.12);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.yt-logo:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.65), 0 0 14px rgba(255,215,0,0.18);
+}
+
+@media (max-width: 900px) {
+    .sub-title {
+        font-size: 1.6rem;
+    }
+    .yt-logo {
+        width: 160px;
+        padding: 4px;
+        border-radius: 10px;
+    }
+}
+
+/* --- Layout Principal --- */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr; /* Texto a la izquierda, media a la derecha */
+    gap: 40px;
+}
+
+/* --- Columna Izquierda --- */
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.install-box {
+    margin: 30px 0;
+    padding: 20px;
+    border: 2px dashed #000;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.install-box h3 {
+    margin-bottom: 10px;
+}
+
+.install-box code {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.download-section {
+    margin: 40px 0;
+}
+
+.yellow-btn {
+    background: #ffff00;
+    color: #000;
+    border: 3px solid #000;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 7px 7px 0px #000;
+    transition: 0.1s;
+}
+
+.yellow-btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 10px 10px 0px #000;
+}
+
+/* --- Tutorial de Video --- */
+.tutorial-container {
+    margin-top: 40px;
+}
+
+.tutorial-header h3 {
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.video-wrapper {
+    border: 10px solid #ff80ff; /* Borde rosa neón del modelo original */
+    background: #000;
+    line-height: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* --- Columna Derecha --- */
+.side-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.img-card img {
+    width: 100%;
+    border: 4px solid #000;
+    border-radius: 4px;
+}
+
+/* --- Sistema de Comentarios --- */
+.comment-box {
+    background: #d9d9d9;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+.comment-box h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.comment-box textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+    resize: none;
+}
+
+.blue-btn {
+    width: 100%;
+    padding: 12px;
+    background: #5865f2;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los comentarios creados dinámicamente */
+.comentario-item {
+    background: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* --- Caja de Advertencia Mejorada --- */
+.warning-box {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    border-left: 6px solid #dc3545;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+    color: #721c24;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.warning-box::before {
+    content: "⚠️";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.warning-box h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.warning-box ul {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.warning-box li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.warning-box li::before {
+    content: "•";
+    color: #dc3545;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.warning-box strong {
+    color: #b02a37;
+    font-weight: 600;
+}
+
+.warning-box em {
+    font-style: italic;
+    color: #8b1e1e;
+}
+
+.comentario-item p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.btn-borrar {
+    width: 100%;
+    padding: 8px;
+    background: #5865f2; /* Mismo azul que el botón crear */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- Diseño Responsivo --- */
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .header-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ... (Mantén tus estilos anteriores de body, container y header) ... */
+
+.mod-details {
+    margin: 40px 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid #000;
+    padding-bottom: 10px;
+}
+
+.category {
+    margin-bottom: 30px;
+}
+
+.category h3 {
+    font-size: 1.5rem;
+    color: #8b1e1e;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.mod-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.mod-list li {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 8px 12px;
+    border-left: 4px solid #ffff00;
+}
+
+.mod-list li span {
+    font-weight: 900;
+    color: #000;
+}
+
+/* --- Estilos para la sección "Otros Cambios" (simple-list) --- */
+.mod-category h3 {
+    font-size: 1.4rem;
+    color: #00457c;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, rgba(0,69,124,0.06), rgba(0,69,124,0.02));
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left: 6px solid #00457c;
+}
+
+.mod-category .simple-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mod-category .simple-list li {
+    background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    padding: 10px 14px;
+    border-radius: 6px;
+    border-left: 6px solid #ffd700;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    font-weight: 700;
+    color: #0b0b0b;
+}
+
+@media (max-width: 900px) {
+    .mod-category .simple-list {
+        gap: 8px;
+    }
+}
+
